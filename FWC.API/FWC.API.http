@@ -1,0 +1,6 @@
+@FWC.API_HostAddress = http://localhost:5259
+
+GET {{FWC.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

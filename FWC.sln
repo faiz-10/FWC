@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36127.28 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWC.API", "FWC.API\FWC.API.csproj", "{794F7804-2E55-45C3-B65A-14E59497055B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{794F7804-2E55-45C3-B65A-14E59497055B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{794F7804-2E55-45C3-B65A-14E59497055B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{794F7804-2E55-45C3-B65A-14E59497055B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{794F7804-2E55-45C3-B65A-14E59497055B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40AB6013-9D1C-4EFD-ADFF-EB954637D0A5}
+	EndGlobalSection
+EndGlobal

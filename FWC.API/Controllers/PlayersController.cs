@@ -23,7 +23,7 @@ namespace FWC.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetPlayers() 
         {
-            var players = await dbContext.Players.ToListAsync();
+            var players = await dbContext.Players.Include(p => p.Team).ToListAsync();
             return Ok(players);
         }
 
@@ -31,7 +31,7 @@ namespace FWC.API.Controllers
         [Route("{id:Guid}")]
         public async Task<IActionResult> GetPlayerById([FromRoute] Guid id)
         {
-            var player = await dbContext.Players.FirstOrDefaultAsync(x => x.Id == id);
+            var player = await dbContext.Players.Include(p => p.Team).FirstOrDefaultAsync(x => x.Id == id);
             if (player == null) { return NotFound(); }
             return Ok(player);
         }
@@ -53,7 +53,7 @@ namespace FWC.API.Controllers
         public async Task<IActionResult> UpdatePlayer([FromRoute] Guid id, [FromBody] PlayerDto playerDto)
         {
 
-            var player = await dbContext.Players.FirstOrDefaultAsync(p => p.Id == id);
+            var player = await dbContext.Players.Include(p => p.Team).FirstOrDefaultAsync(p => p.Id == id);
             if(player == null) { return NotFound(); }
 
             player.FirstName = playerDto.FirstName;
@@ -69,7 +69,7 @@ namespace FWC.API.Controllers
         [Route("{id:Guid}")]
         public async Task<IActionResult> DeletePlayer([FromRoute] Guid id)
         {
-            var player = await dbContext.Players.FirstOrDefaultAsync(p => p.Id == id);
+            var player = await dbContext.Players.Include(p => p.Team).FirstOrDefaultAsync(p => p.Id == id);
             if (player == null) { return NotFound(); }
 
             dbContext.Players.Remove(player);

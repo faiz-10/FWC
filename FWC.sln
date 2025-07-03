@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36127.28 d17.14
+VisualStudioVersion = 17.14.36127.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWC.API", "FWC.API\FWC.API.csproj", "{794F7804-2E55-45C3-B65A-14E59497055B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWC.UI", "FWC.UI\FWC.UI.csproj", "{1AC73C4A-1B4F-426B-B1EF-97F9DA003E71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{794F7804-2E55-45C3-B65A-14E59497055B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{794F7804-2E55-45C3-B65A-14E59497055B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{794F7804-2E55-45C3-B65A-14E59497055B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AC73C4A-1B4F-426B-B1EF-97F9DA003E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AC73C4A-1B4F-426B-B1EF-97F9DA003E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AC73C4A-1B4F-426B-B1EF-97F9DA003E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AC73C4A-1B4F-426B-B1EF-97F9DA003E71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

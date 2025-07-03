@@ -40,7 +40,12 @@ namespace FWC.API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("TeamId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("TeamId");
 
                     b.ToTable("Players");
                 });
@@ -58,6 +63,17 @@ namespace FWC.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Teams");
+                });
+
+            modelBuilder.Entity("FWC.API.Models.Player", b =>
+                {
+                    b.HasOne("FWC.API.Models.Team", "Team")
+                        .WithMany()
+                        .HasForeignKey("TeamId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Team");
                 });
 #pragma warning restore 612, 618
         }
